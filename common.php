@@ -191,7 +191,7 @@ function main($path)
     //    return output('<script>alert(\'to fisrt disk\');</script>', 302, [ 'Location' => '?account=' . $disktags[0] ]);
     //}
 
-    //echo "1" . $_SERVER['disktag'] . PHP_EOL;
+    echo "1" . $_SERVER['disktag'] . PHP_EOL;
     if (driveisfine($drive, $_SERVER['disktag'])) {
         //echo "2" . $drive->disktag . PHP_EOL;
         // Operate
