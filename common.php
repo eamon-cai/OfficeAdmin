@@ -186,12 +186,13 @@ function main($path)
     }
 
     $_SERVER['disktag'] = $_GET['account'];
+    if (!$_SERVER['disktag']) $_SERVER['disktag'] = '';
     $disktags = explode("|", getConfig('disktag'));
     //if ($_SERVER['disktag']==''||!in_array($_SERVER['disktag'], $disktags)) {
     //    return output('<script>alert(\'to fisrt disk\');</script>', 302, [ 'Location' => '?account=' . $disktags[0] ]);
     //}
 
-    echo "1" . $_SERVER['disktag'] . PHP_EOL;
+    //echo "1" . $_SERVER['disktag'] . PHP_EOL;
     if (driveisfine($drive, $_SERVER['disktag'])) {
         //echo "2" . $drive->disktag . PHP_EOL;
         // Operate
